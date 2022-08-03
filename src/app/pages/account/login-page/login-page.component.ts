@@ -11,13 +11,13 @@ import { CustomValidator } from 'src/app/validators/custom.validators';
   templateUrl: './login-page.component.html'
 })
 export class LoginPageComponent implements OnInit {
-  private router!: Router;
   public form!: FormGroup;
   public busy = false;
 
   constructor(
     private service: DataService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router
   ) {
     this.form = this.fb.group({
       username: ['', Validators.compose([
@@ -61,7 +61,7 @@ export class LoginPageComponent implements OnInit {
       .subscribe({
         next: (data: any) => {
           this.busy = false;
-          this.setUser(data.customer, data.token)
+          this.setUser(data.customer, data.token);
         },
         error: (e) => {
           console.log(e);
