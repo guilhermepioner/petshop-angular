@@ -31,8 +31,20 @@ export class CartPageComponent implements OnInit {
   }
 
   public remove(item: CartItem) {
-    let index = this.cart.items.indexOf(item);
+    const index = this.cart.items.indexOf(item);
     this.cart.items.splice(index, 1);
+    CartUtil.update(this.cart);
+  }
+
+  public removeOne(item: CartItem) {
+    const index = this.cart.items.indexOf(item);
+    this.cart.items[index].quantity--;
+
+    if (this.cart.items[index].quantity < 1) {
+      this.remove(item);
+      return;
+    }
+
     CartUtil.update(this.cart);
   }
 
