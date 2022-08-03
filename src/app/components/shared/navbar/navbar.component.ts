@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'src/app/models/user.model';
 import { Security } from 'src/app/utils/security.util';
+import { CartUtil } from 'src/app/utils/cart.util';
 
 @Component({
   selector: 'app-navbar',
@@ -14,6 +15,12 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.user = Security.getUser();
+  }
+
+  public countCartItems() {
+    let cart = CartUtil.get();
+
+    return cart.items.length;
   }
 
   logout() {
