@@ -25,6 +25,7 @@ Below is the list with the improvements and new _features_ that I implemented my
 
 - Counter of items present in the shopping cart for the navigation bar
 - The shopping cart groups the items correctly. Only one item is listed for each product, but it increases the quantity of that item.
+- A mocked payment page to give functionality to the "Finalizar Compra" (in english, Checkout) button
 
 ---
 
@@ -55,4 +56,4 @@ Segue abaixo a lista com as melhorias e novas _features_ que eu implementei indi
 
 - Contador de itens presentes no carrinho de compras para a barra de navegação
 - O carrinho de compras agrupa os itens corretamente. Aparece somente um item listado para cada produto, porém, aumenta a quantidade do mesmo.
-
+- Uma página de pagamento mocada para dar funcionalidade ao botão "Finalizar Compra"

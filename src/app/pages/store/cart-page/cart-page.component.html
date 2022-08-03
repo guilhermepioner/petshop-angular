@@ -41,7 +41,7 @@
       <h3 class="uk-text-right">
         {{ total()/100 | currency: 'BRL' }}
       </h3>
-      <a href="/payment" class="uk-button uk-button-large uk-button-primary uk-margin-small-bottom">
+      <a [routerLink]="['/checkout']" class="uk-button uk-button-large uk-button-primary uk-margin-small-bottom">
         FINALIZAR COMPRA
       </a>
     </div>
