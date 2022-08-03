@@ -30,7 +30,7 @@ export class MaskDirective {
 
     for (i=0, x = 1; x && i < mask.length; i++) {
       c = data.charAt(i);
-      m = data.charAt(i);
+      m = mask.charAt(i);
 
       switch (mask.charAt(i)) {
         case '#':
