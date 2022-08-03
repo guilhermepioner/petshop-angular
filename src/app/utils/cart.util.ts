@@ -18,6 +18,8 @@ export class CartUtil {
     
     cart.items.push(item);
 
+    this.groupItens(cart);
+
     localStorage.setItem('petshopcart', JSON.stringify(cart))
   }
 
@@ -27,5 +29,24 @@ export class CartUtil {
 
   public static clear() {
     localStorage.removeItem('petshopcart');
+  }
+
+  public static groupItens(cart: Cart) {
+    let uniqueIds = new Set();
+
+    cart.items = cart.items.filter(item => {
+      const isDuplicate = uniqueIds.has(item.id);
+
+      uniqueIds.add(item.id);
+
+      if (!isDuplicate) {
+        return true;
+      }
+
+      const index = cart.items.findIndex((x) => x.id == item.id);
+      cart.items[index].quantity++;
+
+      return false;
+    });
   }
 }

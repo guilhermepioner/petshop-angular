@@ -24,6 +24,7 @@ As much as the course is very complete in terms of content for Angular, it ends 
 Below is the list with the improvements and new _features_ that I implemented myself:
 
 - Counter of items present in the shopping cart for the navigation bar
+- The shopping cart groups the items correctly. Only one item is listed for each product, but it increases the quantity of that item.
 
 ---
 
@@ -53,4 +54,5 @@ Por mais que o curso seja bem completo no quesito conteúdo para o Angular, ele 
 Segue abaixo a lista com as melhorias e novas _features_ que eu implementei individualmente:
 
 - Contador de itens presentes no carrinho de compras para a barra de navegação
+- O carrinho de compras agrupa os itens corretamente. Aparece somente um item listado para cada produto, porém, aumenta a quantidade do mesmo.
 
